@@ -175,39 +175,39 @@ correspond directly to the area.
 
 \begin{example}
   Compute the area of one petal of the polar curve $r(\theta) =
-  \cos(3\theta)$:
+  \cos(10\theta)$:
   \begin{image}
     \begin{tikzpicture}
           \begin{polaraxis}[
               xtick={0,30,...,360},
-              xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{11\pi}{6}$,$2\pi$},
+              xticklabels={$0$,$\frac{\pi}{10}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{11\pi}{6}$,$2\pi$},
               ytick={.5,1,...,2},
               yticklabels={},axis on top
             ]
-            \addplot+[very thick, mark=none,fill=fill1,domain=-30:30,samples=100,smooth] {cos(3*x)} \closedcycle;
-            \addplot+[very thick, mark=none,penColor,domain=0:180,samples=100,smooth] {cos(3*x)};
+            \addplot+[very thick, mark=none,fill=fill1,domain=-30:30,samples=100,smooth] {cos(10*x)} \closedcycle;
+            \addplot+[very thick, mark=none,penColor,domain=0:180,samples=100,smooth] {cos(10*x)};
           \end{polaraxis}
     \end{tikzpicture}
   \end{image}
   \begin{explanation}
     From the picture it looks like integrating from
-    $\theta=-\pi/6$ to $\pi/6$ will give us the area
+    $\theta=-\pi/10$ to $\pi/10$ will give us the area
       of our desired region. We can convince ourselves that this is
       correct by inspecting
       \[
-      r(\theta) = \cos(3\theta)
+      r(\theta) = \cos(10\theta)
       \]
       and noting that our curve starts at
       $(\answer[given]{1},\answer[given]{0})$ in the $(x,y)$-plane
       when $\theta=0$, and then moves to the origin. Since the first
       positive value of $\theta$ that make $r(\theta)= 0$ is
-      $\answer[given]{\pi/6}$, we see that our eyes did not lie to
+      $\answer[given]{\pi/10}$, we see that our eyes did not lie to
       us. Write with me
       \begin{align*}
-      \frac{1}{2}\int_{-\pi/6}^{\pi/6} r(\theta)^2 \d \theta &= \frac{1}{2}\int_{-\pi/6}^{\pi/6} \cos^2(3\theta) \d \theta\\
-      &= \frac{1}{2}\int_{-\pi/6}^{\pi/6} \frac{1-\cos(6\theta)}{2} \d \theta\\
-      &= \frac{1}{4}\int_{-\pi/6}^{\pi/6} 1-\cos(6\theta) \d \theta\\
-      &= \frac{1}{4}\eval{\theta-\frac{\sin(6\theta)}{6}}_{-\pi/6}^{\pi/6}\\
+      \frac{1}{2}\int_{-\pi/10}^{\pi/10} r(\theta)^2 \d \theta &= \frac{1}{2}\int_{-\pi/10}^{\pi/10} \cos^2(10\theta) \d \theta\\
+      &= \frac{1}{2}\int_{-\pi/10}^{\pi/10} \frac{1-\cos(10\theta)}{2} \d \theta\\
+      &= \frac{1}{4}\int_{-\pi/10}^{\pi/10} 1-\cos(20\theta) \d \theta\\
+      &= \frac{1}{4}\eval{\theta-\frac{\sin(20\theta)}{6}}_{-\pi/10}^{\pi/10}\\
       &= \answer[given]{\frac{\pi}{12}}.
       \end{align*}
   \end{explanation}
@@ -215,8 +215,8 @@ correspond directly to the area.
 
 \begin{question}
 Now I present you with a mystery: You know that the area of one petal
-of $r(\theta) = \cos(3\theta)$ has area $\pi/12$. Hence, all three
-petals must have an area of $\pi/4$. Compare this to
+of $r(\theta) = \cos(10\theta)$ has area $\pi/40$. Hence, all twenty
+petals must have an area of $\pi/2$. Compare this to
 \begin{align*}
 \frac{1}{2}\int_0^{2\pi}  \cos^2(3\theta) \d \theta &= \frac{1}{2}\int_{0}^{2\pi} \frac{1-\cos(6\theta)}{2} \d \theta\\
 &= \frac{1}{4}\int_{0}^{2\pi} 1-\cos(6\theta) \d \theta\\
